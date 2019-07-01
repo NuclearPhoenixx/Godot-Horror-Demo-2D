@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/game/player.gd" type="Script" id=1]
+[ext_resource path="res://textures/player_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://textures/light.png" type="Texture" id=3]
+[ext_resource path="res://src/game/camera.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlayerModel" type="Sprite" parent="."]
+light_mask = 2
+position = Vector2( 4.76837e-007, 4.76837e-007 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="FOV" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 3.0
+mode = 2
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0.980392 )
+shadow_filter = 5
+
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+smoothing_speed = 12.0
+script = ExtResource( 4 )
