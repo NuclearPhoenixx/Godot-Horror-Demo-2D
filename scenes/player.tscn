@@ -1,20 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/game/player.gd" type="Script" id=1]
+[ext_resource path="res://src/game/player/player.gd" type="Script" id=1]
 [ext_resource path="res://textures/player_placeholder.png" type="Texture" id=2]
 [ext_resource path="res://textures/light.png" type="Texture" id=3]
-[ext_resource path="res://src/game/camera.gd" type="Script" id=4]
+[ext_resource path="res://src/game/hud/debug_showhide.gd" type="Script" id=4]
+[ext_resource path="res://src/game/player/camera.gd" type="Script" id=5]
+[ext_resource path="res://src/game/player/death.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 15.0
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="PlayerModel" type="Sprite" parent="."]
-light_mask = 2
+light_mask = 0
 position = Vector2( 4.76837e-007, 4.76837e-007 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 2 )
@@ -24,16 +26,27 @@ shape = SubResource( 1 )
 
 [node name="FOV" type="Light2D" parent="."]
 texture = ExtResource( 3 )
-texture_scale = 3.0
+texture_scale = 1.5
 mode = 2
 shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 0.980392 )
+shadow_color = Color( 0, 0, 0, 1 )
 shadow_filter = 5
+script = ExtResource( 4 )
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 0.6, 0.6 )
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
 smoothing_speed = 12.0
-script = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="DeathBox" type="Area2D" parent="."]
+editor/display_folded = true
+monitorable = false
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBox"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="DeathBox" to="DeathBox" method="_on_DeathZone_body_entered"]

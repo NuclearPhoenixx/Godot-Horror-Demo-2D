@@ -1,13 +1,16 @@
 extends KinematicBody2D
 
-var WALK_SPEED = 50
+var WALK_SPEED = 60
 var SPRINT_SPEED = 100
+
 var follow_mode = false # If pressed up/forward follow the mouse instead of just going up
+
+var sprints = SPRINT_SPEED
 
 func move():
 	var speed = WALK_SPEED
 	if Input.is_action_pressed("sprint"): # check if player is sprinting
-		speed = SPRINT_SPEED
+		speed = sprints
 	
 	var move = Vector2(0,-1)
 	if follow_mode:
