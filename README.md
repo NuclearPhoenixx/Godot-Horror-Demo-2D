@@ -9,7 +9,9 @@ This demonstration combines the following interesting aspects:
 
 To run the demo you can either download this repository or clone it. You will then need to import the folder into the latest Godot 3.1 or scan for it. That's basically all you need to do. Then just go ahead and press "Launch" or F5 in the editor.
 
-A simple live demo is available here: https://phoenix1747.github.io/Godot-SpookDemo2D/
+**A simple live demo is available here: https://phoenix1747.github.io/Godot-SpookDemo2D/**
+
+---
 
 ### Directory structure
 
@@ -21,6 +23,8 @@ A simple live demo is available here: https://phoenix1747.github.io/Godot-SpookD
 
 `textures` - textures for all nodes
 
+---
+
 ### Controls
 
 | KEY | FUNCTION |
@@ -31,6 +35,8 @@ A simple live demo is available here: https://phoenix1747.github.io/Godot-SpookD
 | WASD & arrow keys | Move |
 | SHIFT | Sprint |
 | mouse wheel up/down | Camera zoom |
+
+---
 
 ### Debugging Mode
 
