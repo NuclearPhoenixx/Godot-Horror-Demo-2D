@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://textures/tilemap/tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/enemy_generic.tscn" type="PackedScene" id=4]
-[ext_resource path="res://textures/light.png" type="Texture" id=5]
 
 [node name="World" type="Node2D"]
 
@@ -26,12 +25,3 @@ position = Vector2( 535.178, 373.406 )
 
 [node name="GenericEnemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1094.77, 653.845 )
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( -199, 151 )
-texture = ExtResource( 5 )
-texture_scale = 0.3
-color = Color( 1, 0.909804, 0.556863, 1 )
-mode = 2
-shadow_enabled = true
-shadow_color = Color( 1, 0.180392, 0.180392, 0 )
