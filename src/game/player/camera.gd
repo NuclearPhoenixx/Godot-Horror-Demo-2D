@@ -1,7 +1,7 @@
 extends Camera2D
 
 var MAX_ZIN = Vector2(0.3, 0.3)
-var MAX_ZOUT = Vector2(1.2, 1.2)
+var MAX_ZOUT = Vector2(0.8, 0.8)
 var ZOOM_RES = .05
 
 func _unhandled_input(event):
