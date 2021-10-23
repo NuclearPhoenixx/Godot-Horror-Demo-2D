@@ -9,7 +9,7 @@ This demonstration combines the following interesting aspects:
 
 To run the demo you can either download this repository or clone it. You will then need to import the folder into the latest Godot (>=3.3.3) or scan for it. That's basically all you need to do. Then just go ahead and press "Launch" or F5 in the editor.
 
-**A simple live demo is available here: https://phoenix1747.github.io/Godot-HorrorDemo2D/**
+**A simple live demo is available here: https://phoenix1747.github.io/Godot-Horror-Demo-2D/**
 
 ---
 
