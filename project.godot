@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2D Horror Demo"
+config/name="Godot 2D Horror Demo"
 run/main_scene="res://maps/map_test_1.tscn"
 config/icon="res://icon.png"
 
