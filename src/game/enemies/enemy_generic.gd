@@ -9,14 +9,15 @@ var SPEED = 80
 func _physics_process(delta): #real short movement code. seems to work, nice :)
 	var path = nav.get_simple_path(position, player.position)
 	
-	var distance = path[1] - position
-	
-	if distance.length() <= 0:
-		path.remove(1)
-		return
-	
-	var direction = distance.normalized()
-	move_and_slide(direction * SPEED)
+	if path.size() > 0:
+		var distance = path[1] - position
+		
+		if distance.length() <= 0:
+			path.remove(1)
+			return
+		
+		var direction = distance.normalized()
+		move_and_slide(direction * SPEED)
 	
 	# DEBUG STUFF
 	if game.debug_mode: #if in debug mode then show the pathfinding vectors
