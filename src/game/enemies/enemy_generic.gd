@@ -7,7 +7,7 @@ onready var pathfinding = get_node("DebugPathfinding")
 var SPEED = 80
 
 func _physics_process(delta): #real short movement code. seems to work, nice :)
-	var path = nav.get_simple_path(position, player.position)
+	var path = Navigation2DServer.map_get_path(nav, position, player.position, true)
 	
 	if path.size() > 0:
 		var distance = path[1] - position
