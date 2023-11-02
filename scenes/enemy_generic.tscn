@@ -10,7 +10,7 @@
 script = ExtResource( 1 )
 
 [node name="EnemyModel" type="Sprite" parent="."]
-position = Vector2( 4.76837e-007, 4.76837e-007 )
+position = Vector2( 4.76837e-07, 4.76837e-07 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 2 )
 
