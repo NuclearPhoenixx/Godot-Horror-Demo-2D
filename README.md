@@ -1,6 +1,6 @@
 # Godot - 2D Horror Demo
 
-This demonstration combines the following interesting aspects:
+This demo for Godot 3.x combines the following interesting aspects:
 - Full 2D Tilemap with map collision
 - 2D movement with WASD and the arrow keys
 - A _depressing_ (lol) atmosphere and field of view built around a Light2D and Light Occluders
