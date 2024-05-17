@@ -11,6 +11,8 @@ To run the demo you can either download this repository or clone it. You will th
 
 **A simple live demo is available here: https://NuclearPhoenixx.github.io/Godot-Horror-Demo-2D/**
 
+This was basically the basis for my unfinished, crappy "game" [SCP - Perception](https://github.com/NuclearPhoenixx/SCP-Perception).
+
 ---
 
 ### Directory structure
