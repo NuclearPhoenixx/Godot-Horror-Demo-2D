@@ -13,6 +13,8 @@ To run the demo you can either download this repository or clone it. You will th
 
 This was basically the basis for my unfinished, crappy "game" [SCP - Perception](https://github.com/NuclearPhoenixx/SCP-Perception).
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J61GLR3G)
+
 ---
 
 ### Directory structure
